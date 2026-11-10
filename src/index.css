@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Rich, mouth-watering French Haute Pâtisserie Greedy/Gourmand Palette (Matches Video) */
+  --bg-stone-ivory: #130B07; /* Deep roasted espresso & warm chocolate ganache backdrop */
+  --bg-creme-surface: #1E120B; /* Warm caramelized crust & praline card surface */
+  --surface-espresso-deep: #0D0704; /* Deepest roast chocolate */
+  --surface-espresso-warm: #28170F; /* Warm roasted coffee bean */
+  --accent-butter: #F5B338; /* Molten golden Isigny butter */
+  --accent-butter-gold: #E59B24; /* Warm caramelized amber honey */
+  --accent-butter-light: #FDF7EE; /* Chantilly whipped cream */
+  --accent-terracotta: #D95A2B; /* Crispy baked 215°C puff pastry crust */
+  --accent-terracotta-hover: #BF481B;
+  --accent-bordeaux: #731726; /* Dark ruby ganache */
+  --text-primary: #FAF3EA; /* Warm chantilly cream text */
+  --text-muted: #C4AEA0; /* Warm café crème / toasted almond */
+  --border-gourmet: rgba(245, 179, 56, 0.18);
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-stone-ivory);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--text-primary);
+  }
+}
+
+/* Seamless Greedy Gourmand Palette Overrides */
+.text-espresso-deep {
+  color: var(--text-primary);
+}
+
+.text-patisserie-muted {
+  color: var(--text-muted);
+}
+
+.fill-espresso-deep {
+  fill: var(--text-primary);
+}
+
+/* Card surfaces and warm borders in greedy theme */
+.bg-white,
+.bg-white\/95,
+.bg-white\/90,
+.bg-white\/85,
+.bg-white\/80,
+.bg-white\/75,
+.bg-white\/70,
+.bg-white\/60 {
+  background-color: #1E120B;
+}
+
+.hover\:bg-white:hover {
+  background-color: #2C1A10;
+}
+
+.hover\:bg-stone-100:hover,
+.hover\:bg-stone-200:hover {
+  background-color: #331F14;
+}
+
+.border-stone-200, .border-stone-300 {
+  border-color: rgba(245, 179, 56, 0.16);
+}
+
+.text-stone-700, .text-stone-800, .text-stone-900 {
+  color: var(--text-primary);
+}
+
+.text-stone-600, .text-stone-500 {
+  color: var(--text-muted);
+}
+
+/* Glassmorphism Boutique Agency Style - Dark Gourmand Edition */
+.glass-patisserie {
+  background: rgba(19, 11, 7, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(245, 179, 56, 0.15);
+  box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.65);
+}
+
+.glass-dark {
+  background: rgba(13, 7, 4, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 179, 56, 0.2);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Tactile Soft Neu-Depth for Segmented Controls & Buttons - Gourmand Edition */
+.tactile-chip {
+  background: #24160E;
+  color: #FAF3EA;
+  border: 1px solid rgba(245, 179, 56, 0.22);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tactile-chip:hover {
+  background: #2C1B12;
+  border-color: rgba(245, 179, 56, 0.4);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.tactile-chip-active {
+  background: #D95A2B;
+  color: #FFFFFF;
+  border-color: #D95A2B;
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Liquid Wave Button Effect */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.btn-magnetic:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -4px rgba(217, 90, 43, 0.45);
+}
+
+.btn-magnetic:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Smooth custom scrollbars in warm caramel tones */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #130B07;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B2418;
+  border-radius: 4px;
+  border: 2px solid #130B07;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D95A2B;
+}
+
+/* Shimmer animation for responsive image skeleton */
+@keyframes shimmerKeyframe {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.animate-shimmer-sweep {
+  transform: translateX(-100%);
+  animation: shimmerKeyframe 1.8s infinite;
+}
